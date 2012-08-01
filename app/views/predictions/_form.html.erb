@@ -10,23 +10,31 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :fixture_id %><br />
-    <%= f.number_field :fixture_id %>
-  </div>
-  <div class="field">
-    <%= f.label :home_goals %><br />
-    <%= f.number_field :home_goals %>
-  </div>
-  <div class="field">
-    <%= f.label :away_goals %><br />
-    <%= f.number_field :away_goals %>
-  </div>
+  
+  <table>
+  <thead>
+    <th>Date</th>
+	<th>Kick-Off</th>
+	<th>Home Team</th>
+	<th>Away Team</th>
+	<th>Home</th>
+    <th>Away</th>
+  </thead>
+  
+  <% Fixture.where(:gameweek_id => 1).each do |fixture| %> 
+  <tr>
+    <td><%= fixture.match_date.strftime("%d/%m/%Y")%></td>
+	<td><%= fixture.match_time.strftime("%H:%M") %></td>
+	<td><%= fixture.home_team %></td> 
+    <td><%= fixture.away_team %></td>
+	<td><%= f.number_field :home_goals %></td>
+    <td><%= f.number_field :away_goals %></td>
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+	<%= f.hidden_field :fixture_id, :value => fixture.id %>
+  </tr>
+  <% end %>  
+  </table>
+    
   <div class="actions">
     <%= f.submit %>
   </div>
