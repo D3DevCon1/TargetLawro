@@ -2,10 +2,13 @@
 
 <table>
   <tr>
+    <th>Gameweek</th>
     <th>Match date</th>
     <th>Match time</th>
     <th>Home team</th>
     <th>Away team</th>
+    <th>Home goals</th>
+    <th>Away goals</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +16,13 @@
 
 <% @fixtures.each do |fixture| %>
   <tr>
+    <td><%= fixture.gameweek_id %></td>
     <td><%= fixture.match_date %></td>
     <td><%= fixture.match_time %></td>
     <td><%= fixture.home_team %></td>
     <td><%= fixture.away_team %></td>
+    <td><%= fixture.home_goals %></td>
+    <td><%= fixture.away_goals %></td>
     <td><%= link_to 'Show', fixture %></td>
     <td><%= link_to 'Edit', edit_fixture_path(fixture) %></td>
     <td><%= link_to 'Destroy', fixture, confirm: 'Are you sure?', method: :delete %></td>

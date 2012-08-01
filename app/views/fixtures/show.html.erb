@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Gameweek:</b>
+  <%= @fixture.gameweek_id %>
+</p>
+
+<p>
   <b>Match date:</b>
   <%= @fixture.match_date %>
 </p>
@@ -18,6 +23,16 @@
 <p>
   <b>Away team:</b>
   <%= @fixture.away_team %>
+</p>
+
+<p>
+  <b>Home goals:</b>
+  <%= @fixture.home_goals %>
+</p>
+
+<p>
+  <b>Away goals:</b>
+  <%= @fixture.away_goals %>
 </p>
 
 

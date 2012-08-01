@@ -1,6 +1,10 @@
 Football::Application.routes.draw do
   resources :predictions
 
+  resources :fixtures
+
+  resources :teams
+
   root :to => 'pages#home'
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -17,7 +21,7 @@ Football::Application.routes.draw do
 
 
   resources :users
-  resources :gameweeks,   :only => [:index, :show]
+  resources :gameweeks,   :only => [:index, :show, :new]
   resources :fixtures,    :only => [:index, :show]
   resources :teams,       :only => [:index, :show]
   resources :scores ,     :only => [:index, :show]

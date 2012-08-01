@@ -1,5 +1,17 @@
 @import "bootstrap";
 
+@font-face {
+    font-family: DeliciousRoman;
+    src: url(http://www.font-face.com/fonts/delicious/Delicious-Roman.otf);
+    font-weight:400;
+}
+
+@font-face {
+    font-family: Sniglet;
+    src: url(http://www.font-face.com/fonts/sniglet/Sniglet.otf);
+    font-weight:400;
+}
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -39,6 +51,20 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+}
+
+h1#pageHeader {
+  padding: 0px;
+  margin: 0px;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  color: gainsboro;
+  text-shadow: 2px 2px 1px navy;
+  height: 134px;
+  border-width: 15px;
+  -moz-border-image: url("football.png") 4% 4% 5% 8% repeat repeat;
+  -webkit-border-image: url("football.png") 4% 4% 5% 8% repeat repeat;
 }
 
 h1 {
@@ -187,10 +213,14 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  width: 71%;
   padding: 10px;
-  height: auto;
-  margin-bottom: 15px;
+  height: 32px;
+  font-size: 12px;
+  margin-bottom: 4px;
+  margin-left: 13px;
+  margin-top:4px;
+  text-align: center;
   @include box_sizing;
 }
 
@@ -306,13 +336,49 @@ tr.odd .column1	{
 .column1	{
 	background:#f9fcfe;
 	}
+	
+tr {
+	height: 15px;
+}	
+	
 td {
 	color:#678197;
 	border-bottom:1px solid #e5eff8;
 	border-left:1px solid #e5eff8;
-	padding:.3em 1em;
+	padding:0;
 	text-align:left;
-	}				
+	}
+	
+tr td.date {
+	width:12%;
+	text-align:center;
+}
+
+td.team img {
+	display: table-cell;
+	height: 50px;
+	width: 42px;
+}
+	
+td.kickoff {
+	width:8%;
+	text-align:center;
+}
+
+td.score {
+	padding: none;
+	margin: 0 0 0 0;
+	width: 10%;
+	height: 15px;
+	font-size: 13px;
+	height: 30px;
+}
+
+td.team {
+    width:30%;
+	padding-left:10px;
+}
+	
 th {
 	font-weight:normal;
 	color: #678197;

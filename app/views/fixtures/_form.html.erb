@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :gameweek_id %><br />
+    <%= f.number_field :gameweek_id %>
+  </div>
+  <div class="field">
     <%= f.label :match_date %><br />
     <%= f.date_select :match_date %>
   </div>
@@ -26,6 +30,14 @@
   <div class="field">
     <%= f.label :away_team %><br />
     <%= f.text_field :away_team %>
+  </div>
+  <div class="field">
+    <%= f.label :home_goals %><br />
+    <%= f.number_field :home_goals %>
+  </div>
+  <div class="field">
+    <%= f.label :away_goals %><br />
+    <%= f.number_field :away_goals %>
   </div>
   <div class="actions">
     <%= f.submit %>

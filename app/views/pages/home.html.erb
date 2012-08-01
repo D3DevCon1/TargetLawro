@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+  </head>
   <% if signed_in? %> 
-    <head>
+    <header>
       <title>Premier League Predictor | <%= current_user.email %>'s Home</title>
-    </head>
+    </header>
     <body>
-      <h1>Predictor Home Page</h1>
+      <h1 id="pageHeader">Ten2One</h1>
       <p>
 	    THIS IS A TEST FOR A SIGNED IN USER
 	  </p>
 	</body>
   <% else %>
-    <head>
+    <header>
       <title>Premier League Predictor | Home</title>
-    </head>
+    </header>
     <body>
-      <h1>Predictor Home Page</h1>
+      <h1 id="pageHeader">TargetLawro</h1>
       <p>
         Welcome to the beta version of the English Premier League Predictor Game where each week you are asked to 
 	    predict the result of each of the Premier League fixtures for that gameweek. Aswell as predicting the result (HOME/DRAW/AWAY) they

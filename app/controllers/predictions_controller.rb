@@ -41,7 +41,7 @@ class PredictionsController < ApplicationController
   # POST /predictions
   # POST /predictions.json
   def create
-    @prediction = Prediction.new(params[:prediction][:scorecasts])
+    @prediction = Prediction.new(params[:prediction])
 
     respond_to do |format|
       if @prediction.save

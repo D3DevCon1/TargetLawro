@@ -10,37 +10,23 @@
       </ul>
     </div>
   <% end %>
-  
-  <table>
-  <tr>
-    <th>Date</th>
-	<th>Kick Off</th>
-	<th>Home</th>
-    <th>Away</th>
-	<th>Home</th>
-	<th>Away</th>
-  </tr>
-
-	<% Fixture.where(:gameweek_no => 1).each do |fixture| %> 
-		<tr>
-			<td><%= fixture.match_date.strftime("%d/%m/%Y")%></td>
-			<td><%= fixture.match_time.strftime("%H:%M") %></td>
-			<td><%= fixture.home_team %></td> 
-			<td><%= fixture.away_team %></td>
-			<f.fields_for :predictions do |builder| %>
-				<td><%= f.number_field :home_score %></td>
-				<td><%= f.number_field :away_score %></td>
-		</tr>
-	<% end %>
-  </table>
 
   <div class="field">
-	<!-- THIS NEEDS TO BE SORTED FOR CURRENT GAMEWEEK CURRENTLY SET TO CURRENT USER -->
-    <%= f.hidden_field :gameweek_no, :value => current_user.id %><br />
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
   </div>
   <div class="field">
-    <%= f.hidden_field :user_id, :value => current_user.id %><br 
-  </div>  
+    <%= f.label :fixture_id %><br />
+    <%= f.number_field :fixture_id %>
+  </div>
+  <div class="field">
+    <%= f.label :home_goals %><br />
+    <%= f.number_field :home_goals %>
+  </div>
+  <div class="field">
+    <%= f.label :away_goals %><br />
+    <%= f.number_field :away_goals %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

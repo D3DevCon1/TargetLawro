@@ -6,19 +6,20 @@
 </p>
 
 <p>
-  <b>Fixture No:</b>
-  <%= @prediction.fixture_no %>
+  <b>Fixture:</b>
+  <%= @prediction.fixture_id %>
 </p>
 
 <p>
-  <b>Home Score:</b>
-  <%= @prediction.home_score %>
+  <b>Home goals:</b>
+  <%= @prediction.home_goals %>
 </p>
 
 <p>
-  <b>Away Score:</b>
-  <%= @prediction.away_score %>
+  <b>Away goals:</b>
+  <%= @prediction.away_goals %>
 </p>
+
 
 <%= link_to 'Edit', edit_prediction_path(@prediction) %> |
 <%= link_to 'Back', predictions_path %>
