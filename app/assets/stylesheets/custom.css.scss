@@ -428,44 +428,48 @@ tfoot th em {
 	}	
 	
 /* gameweeks form */
+
+#gameweekDetails {	
+	width:70%;
+	margin-left:auto;
+	margin-right:160px;
+    border: 2px solid $grayLighter;
+    border-radius: 45px 45px; 
+    padding:20px 5px 5px 20px;	
+}
  
 #gameweekDate {
-	margin-left: 165px;
-	border: 2px solid $grayLighter;
-    border-radius: 45px 45px; 
+	margin-left: 15px;
+	margin-top: -25px;
 	padding: 5px;
 	width: 30%;
 	input, textarea, select, .uneditable-input {
 		width: auto;
-		height: 40px;
+		height: 22px;
 		margin-left: -5px;
 	}
 }
 
 #gameweekTime {
-	margin-top: -89px;
-	margin-left: 459px;
-	border: 2px solid $grayLighter;
-    border-radius: 45px 45px; 
+	margin-top: -67px;
+	margin-left: 215px;
 	padding: 5px;
 	width: 15%;
 	input, textarea, select, .uneditable-input {
 		width: auto;
-		height: 40px;
+		height: 22px;
 		margin-left: -5px;
 	}
 }
 
 #gameweekFixtures {
-	margin-top: -89px;
-	margin-left: 613px;
-	border: 2px solid $grayLighter;
-    border-radius: 45px 45px; 
+	margin-top: -67px;
+	margin-left: 325px;
 	padding: 5px;
 	width: 15%;
 	input, textarea, select, .uneditable-input {
 		width: auto;
-		height: 40px;
+		height: 22px;
 		margin-left: -5px;
 	}
 }
