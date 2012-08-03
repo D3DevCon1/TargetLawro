@@ -1,32 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Gameweek <%= @gameweek.gameweek_no %></h1>
+<% title "Gameweek" %>
 
 <p>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Number of matches:</b><%= @gameweek.fixtures %>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Deadline:</b><%= @gameweek.start_date.strftime("%d/%m/%Y") %> @ <%= @gameweek.start_time.strftime("%H:%M") %>
+  <strong>Start Date:</strong>
+  <%= @gameweek.start_date %>
+</p>
+<p>
+  <strong>Start Time:</strong>
+  <%= @gameweek.start_time %>
+</p>
+<p>
+  <strong>Number Of Fixtures:</strong>
+  <%= @gameweek.number_of_fixtures %>
 </p>
 
-<table>
-  <thead>
-    <th>Date</th>
-	<th>Kick Off</th>
-	<th>Home</th>
-    <th>Away</th>
-  </thead>
-
-<% Fixture.where(:gameweek_id => @gameweek.gameweek_no).each do |fixture| %> 
-  <tr>
-    <td><%= fixture.match_date.strftime("%d/%m/%Y")%></td>
-	<td><%= fixture.match_time.strftime("%H:%M") %></td>
-	<td><%= fixture.home_team %></td> 
-    <td><%= fixture.away_team %></td>
-  </tr>
-<% end %>
-</table>
-
-
-<br>
-<%= link_to 'Back', gameweeks_path %>
+<p>
+  <%= link_to "Edit", edit_gameweek_path(@gameweek) %> |
+  <%= link_to "Destroy", @gameweek, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gameweeks_path %>
+</p>

@@ -1,33 +1,29 @@
-<%= form_for(@gameweek) do |f| %>
-  <% if @gameweek.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@gameweek.errors.count, "error") %> prohibited this gameweek from being saved:</h2>
-
-      <ul>
-      <% @gameweek.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :gameweek_no %><br />
-    <%= f.number_field :gameweek_no %>
-  </div>
-  <div class="field">
+<%= form_for @gameweek do |f| %>
+  <%= f.error_messages %>
+  <p>
     <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
-  </div>
-  <div class="field">
+    <%= f.date_select :start_date, :order => [:day, :month, :year] %>
+  </p>
+  <p>
     <%= f.label :start_time %><br />
     <%= f.time_select :start_time %>
-  </div>
-  <div class="field">
-    <%= f.label :fixtures %><br />
-    <%= f.number_field :fixtures %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </p>
+  <p>
+    <%= f.label :number_of_fixtures %><br />
+    <%= f.number_field :number_of_fixtures %>
+  </p>
+  <table border=1>
+  <thead>
+    <th>Date</th>
+	<th>Time</th>
+	<th>Home Team</th>
+	<th>Away Team</th>
+	<th>Home Goals</th>
+	<th>Away Goals</th>
+  <thead>  
+  <%= f.fields_for :fixtures do |builder| %>
+    <%= render "fixture_fields", :f => builder %>
+  <% end %>
+  </table>
+  <p><%= f.submit %></p>
 <% end %>

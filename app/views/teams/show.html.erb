@@ -1,10 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% title "Team" %>
 
 <p>
-  <b>Name:</b>
+  <strong>Name:</strong>
   <%= @team.name %>
 </p>
 
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<p>
+  <%= link_to "Edit", edit_team_path(@team) %> |
+  <%= link_to "Destroy", @team, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", teams_path %>
+</p>

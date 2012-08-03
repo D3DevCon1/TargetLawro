@@ -1,9 +1,7 @@
 Football::Application.routes.draw do
-  resources :predictions
-
-  resources :fixtures
-
   resources :teams
+
+  resources :gameweeks
 
   root :to => 'pages#home'
   

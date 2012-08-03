@@ -1,49 +1,54 @@
 require 'test_helper'
 
 class TeamsControllerTest < ActionController::TestCase
-  setup do
-    @team = teams(:one)
-  end
-
-  test "should get index" do
+  def test_index
     get :index
-    assert_response :success
-    assert_not_nil assigns(:teams)
+    assert_template 'index'
   end
 
-  test "should get new" do
+  def test_show
+    get :show, :id => Team.first
+    assert_template 'show'
+  end
+
+  def test_new
     get :new
-    assert_response :success
+    assert_template 'new'
   end
 
-  test "should create team" do
-    assert_difference('Team.count') do
-      post :create, team: { name: @team.name }
-    end
-
-    assert_redirected_to team_path(assigns(:team))
+  def test_create_invalid
+    Team.any_instance.stubs(:valid?).returns(false)
+    post :create
+    assert_template 'new'
   end
 
-  test "should show team" do
-    get :show, id: @team
-    assert_response :success
+  def test_create_valid
+    Team.any_instance.stubs(:valid?).returns(true)
+    post :create
+    assert_redirected_to team_url(assigns(:team))
   end
 
-  test "should get edit" do
-    get :edit, id: @team
-    assert_response :success
+  def test_edit
+    get :edit, :id => Team.first
+    assert_template 'edit'
   end
 
-  test "should update team" do
-    put :update, id: @team, team: { name: @team.name }
-    assert_redirected_to team_path(assigns(:team))
+  def test_update_invalid
+    Team.any_instance.stubs(:valid?).returns(false)
+    put :update, :id => Team.first
+    assert_template 'edit'
   end
 
-  test "should destroy team" do
-    assert_difference('Team.count', -1) do
-      delete :destroy, id: @team
-    end
+  def test_update_valid
+    Team.any_instance.stubs(:valid?).returns(true)
+    put :update, :id => Team.first
+    assert_redirected_to team_url(assigns(:team))
+  end
 
-    assert_redirected_to teams_path
+  def test_destroy
+    team = Team.first
+    delete :destroy, :id => team
+    assert_redirected_to teams_url
+    assert !Team.exists?(team.id)
   end
 end

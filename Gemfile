@@ -4,6 +4,7 @@ gem 'rails', '3.2.5'
 gem 'devise', '2.1.0'
 gem 'rails_admin', '0.0.3'
 gem 'cancan'
+gem "nifty-generators", :group => :development
 
 
 # Bundle edge Rails instead:
@@ -40,3 +41,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test
