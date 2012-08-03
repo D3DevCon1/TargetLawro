@@ -55,16 +55,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1#pageHeader {
   padding: 0px;
-  margin: 0px;
-  font-size: 100px;
-  width: 100%;
+  margin-top: -25px;
+  margin-left: -50px;
+  font-size: 70px;
+  width: 108%;
   text-align: center;
+  box-align: center;
   color: gainsboro;
   text-shadow: 2px 2px 1px navy;
-  height: 134px;
+  height: 120px;
   border-width: 15px;
-  -moz-border-image: url("football.png") 4% 4% 5% 8% repeat repeat;
-  -webkit-border-image: url("football.png") 4% 4% 5% 8% repeat repeat;
+  -moz-border-image: url("football.png") 0% 10% 5% 11% repeat repeat;
+  -webkit-border-image: url("football.png") 0% 10% 5% 11% repeat repeat;
 }
 
 h1 {
@@ -214,8 +216,8 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 80%;
-  padding: 10px;
-  height: 35px;
+  padding: 0;
+  height: 22px;
   font-size: 12px;
   margin-bottom: 4px;
   margin-left: 5px;
@@ -428,7 +430,7 @@ tfoot th em {
 /* gameweeks form */
  
 #gameweekDate {
-	margin-left: 100px;
+	margin-left: 165px;
 	border: 2px solid $grayLighter;
     border-radius: 45px 45px; 
 	padding: 5px;
@@ -442,7 +444,7 @@ tfoot th em {
 
 #gameweekTime {
 	margin-top: -89px;
-	margin-left: 394px;
+	margin-left: 459px;
 	border: 2px solid $grayLighter;
     border-radius: 45px 45px; 
 	padding: 5px;
@@ -456,7 +458,7 @@ tfoot th em {
 
 #gameweekFixtures {
 	margin-top: -89px;
-	margin-left: 548px;
+	margin-left: 613px;
 	border: 2px solid $grayLighter;
     border-radius: 45px 45px; 
 	padding: 5px;
@@ -476,11 +478,13 @@ tfoot th em {
 	}
 }
 
-.goals {    
+.goals {   	
 	padding: 1px;
 	margin: 0;
 	input, textarea, select, .uneditable-input {
-		width: 95%;
+		font-size: 15px;
+		text-align: center;
+		width: 89%;
 	}
 }
 

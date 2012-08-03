@@ -1,7 +1,7 @@
 <td class="goals"><%= f.number_field :home_goals %></td>
 <td class="goals"><%= f.number_field :away_goals %></td>
 <div class="field">
-    <%= f.hidden_field :user_id, :value => 1 %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
 </div>
 <div class="field">
     <%= f.hidden_field :fixture_id, :value => @fixture.id %>
