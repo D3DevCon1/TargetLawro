@@ -213,16 +213,32 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 71%;
+  width: 80%;
   padding: 10px;
-  height: 32px;
+  height: 35px;
   font-size: 12px;
   margin-bottom: 4px;
   margin-left: 13px;
   margin-top:4px;
-  text-align: center;
+  text-align: left;
   @include box_sizing;
 }
+
+#loginBox {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  padding: 20px;
+  border: 2px solid $grayLighter;
+  border-radius: 45px 45px;   
+}
+
+#rememberMe {
+  list-style: none;
+}
+
+
 
 #error_explanation {
   color:#f00;

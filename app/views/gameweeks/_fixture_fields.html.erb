@@ -1,0 +1,10 @@
+<tr>
+  <td><%= f.date_select :match_date, :order => [:day, :month, :year] %></td>
+  <td><%= f.time_select :match_time %></td>
+  <td><%= f.collection_select :home_team, Team.all, :name, :name, :include_blank=>"-Select Home Team-" %></td>
+  <td><%= f.collection_select :away_team, Team.all, :name, :name, :include_blank=>"-Select Away Team-" %></td>
+  <%= f.fields_for :prediction do |builder| %>
+    <%= render 'prediction_fields', :f => builder %>
+  <% end %>
+</tr>
+
