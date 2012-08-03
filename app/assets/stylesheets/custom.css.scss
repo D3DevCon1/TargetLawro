@@ -218,7 +218,7 @@ input, textarea, select, .uneditable-input {
   height: 35px;
   font-size: 12px;
   margin-bottom: 4px;
-  margin-left: 13px;
+  margin-left: 5px;
   margin-top:4px;
   text-align: left;
   @include box_sizing;
@@ -328,7 +328,7 @@ aside {
 /* tables */
 
 table {
-	width:90%;
+	width:70%;
 	border-top:1px solid #e5eff8;
 	border-right:1px solid #e5eff8;
 	margin:1em auto;
@@ -381,18 +381,18 @@ td.kickoff {
 	text-align:center;
 }
 
-td.score {
+td.goals {
 	padding: none;
-	margin: 0 0 0 0;
-	width: 10%;
+	margin: 0 5px 0 0;
+	width: 5%;
 	height: 15px;
 	font-size: 13px;
 	height: 30px;
 }
 
 td.team {
-    width:30%;
-	padding-left:10px;
+	padding:0;
+	margin:5px;
 }
 	
 th {
@@ -424,5 +424,63 @@ tfoot th em {
 	font-size: 1.1em;
 	font-style: normal;
 	}	
+	
+/* gameweeks form */
+ 
+#gameweekDate {
+	margin-left: 100px;
+	border: 2px solid $grayLighter;
+    border-radius: 45px 45px; 
+	padding: 5px;
+	width: 30%;
+	input, textarea, select, .uneditable-input {
+		width: auto;
+		height: 40px;
+		margin-left: -5px;
+	}
+}
 
+#gameweekTime {
+	margin-top: -89px;
+	margin-left: 394px;
+	border: 2px solid $grayLighter;
+    border-radius: 45px 45px; 
+	padding: 5px;
+	width: 15%;
+	input, textarea, select, .uneditable-input {
+		width: auto;
+		height: 40px;
+		margin-left: -5px;
+	}
+}
+
+#gameweekFixtures {
+	margin-top: -89px;
+	margin-left: 548px;
+	border: 2px solid $grayLighter;
+    border-radius: 45px 45px; 
+	padding: 5px;
+	width: 15%;
+	input, textarea, select, .uneditable-input {
+		width: auto;
+		height: 40px;
+		margin-left: -5px;
+	}
+}
+
+.team {    
+	padding: 1px;
+	margin: 0;
+	input, textarea, select, .uneditable-input {
+		width: 95%;
+	}
+}
+
+.goals {    
+	padding: 1px;
+	margin: 0;
+	input, textarea, select, .uneditable-input {
+		width: 95%;
+	}
+}
 

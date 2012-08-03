@@ -1,17 +1,23 @@
 <%= form_for @gameweek do |f| %>
   <%= f.error_messages %>
+  <div id="gameweekDate">
   <p>
-    <%= f.label :start_date %><br />
+    &nbsp;&nbsp;&nbsp;<b>Week Commences:</b><br />
     <%= f.date_select :start_date, :order => [:day, :month, :year] %>
   </p>
+  </div>
+  <div id="gameweekTime">
   <p>
-    <%= f.label :start_time %><br />
+    &nbsp;&nbsp;&nbsp;<b>Deadline:</b><br />
     <%= f.time_select :start_time %>
   </p>
+  </div>
+  <div id="gameweekFixtures">
   <p>
-    <%= f.label :number_of_fixtures %><br />
+    &nbsp;&nbsp;&nbsp;<b>Fixtures:</b><br />
     <%= f.number_field :number_of_fixtures %>
   </p>
+  </div>
   <table border=1>
   <thead>
     <th>Date</th>
