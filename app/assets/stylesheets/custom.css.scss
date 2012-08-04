@@ -26,10 +26,17 @@ $grayMediumLight: #eaeaea;
 
 html {
   overflow-y: scroll;
+  height: 100%;
 }
 
 body {
   padding-top: 60px;
+  min-height: 100%;
+}
+
+#mainContainer {
+	overflow:auto;
+	padding-bottom: 50px;
 }
 
 section {
@@ -54,14 +61,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1#pageHeader {
-  padding: 0px;
-  margin-top: -25px;
+  padding-top: 26px;
+  margin-top: -56px;
   margin-left: -50px;
   font-size: 70px;
   width: 108%;
   text-align: center;
   box-align: center;
-  color: gainsboro;
+  color: tomato;
   text-shadow: 2px 2px 1px navy;
   height: 120px;
   border-width: 15px;
@@ -71,8 +78,8 @@ h1#pageHeader {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+  letter-spacing: -4px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
@@ -111,28 +118,12 @@ p {
 
 /* footer */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover { 
-      color: $grayDarker;
-    }
-  }  
-  small { 
-    float: left; 
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
+#footer {
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear:both; 
+  text-align:center;
 }
 
 /* miscellaneous */
@@ -430,9 +421,9 @@ tfoot th em {
 /* gameweeks form */
 
 #gameweekDetails {	
-	width:70%;
+	width:60%;
 	margin-left:auto;
-	margin-right:160px;
+	margin-right:187px;
     border: 2px solid $grayLighter;
     border-radius: 45px 45px; 
     padding:20px 5px 5px 20px;	
@@ -452,7 +443,7 @@ tfoot th em {
 
 #gameweekTime {
 	margin-top: -67px;
-	margin-left: 215px;
+	margin-left: 265px;
 	padding: 5px;
 	width: 15%;
 	input, textarea, select, .uneditable-input {
@@ -464,7 +455,7 @@ tfoot th em {
 
 #gameweekFixtures {
 	margin-top: -67px;
-	margin-left: 325px;
+	margin-left: 435px;
 	padding: 5px;
 	width: 15%;
 	input, textarea, select, .uneditable-input {
