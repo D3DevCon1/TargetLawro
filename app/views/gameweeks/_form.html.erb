@@ -33,8 +33,8 @@
     <%= render "fixture_fields", :f => builder %>
   <% end %>
   </table>
-  <div id="gameweekButtons">
-    <%= f.submit %>
-	<%= button_to "Back", gameweeks_path %>
+  <div id="gameweekButtons">      
+	<div id="backButton"><%= button_to "Back", gameweeks_path %></div>  
+	<div id="submitButton"><%= f.submit %></div>
   </div>
 <% end %>

@@ -352,8 +352,7 @@ tr {
 	
 td {
 	color:#678197;
-	border-bottom:1px solid #e5eff8;
-	border-left:1px solid #e5eff8;
+	border:2px solid #084A77;
 	padding:0;
 	text-align:left;
 	}
@@ -392,15 +391,14 @@ th {
 	font-weight:normal;
 	color: #678197;
 	text-align:left;
-	border-bottom: 1px solid #e5eff8;
-	border-left:1px solid #e5eff8;
+	border: 2px solid #084A77;
 	padding:.3em 1em;
 	}							
 thead th {
-	background:#f4f9fe;
+	background:#084A77;
 	text-align:center;
 	font:bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
-	color:#66a3d3
+	color:white;
 	}	
 tfoot th {
 	text-align:center;
@@ -421,12 +419,15 @@ tfoot th em {
 /* gameweeks form */
 
 #gameweekDetails {	
-	width:60%;
+	width:70%;
 	margin-left:auto;
-	margin-right:187px;
+	margin-right:auto;
+	margin-bottom: -12px;
     border: 2px solid $grayLighter;
-    border-radius: 45px 45px; 
-    padding:20px 5px 5px 20px;	
+    border-radius: 20px 20px 0px 0px; 
+    padding:30px 0px 0px 0px;	
+	background:#084A77;
+	color:white;
 }
  
 #gameweekDate {
@@ -463,6 +464,32 @@ tfoot th em {
 		height: 22px;
 		margin-left: -5px;
 	}
+}
+
+#gameweekButtons {
+	margin-left: auto;
+	margin-right: auto;
+	width: 71%;
+	input, textarea, select, .uneditable-input {
+		width: 120px;
+		height: 40px;
+		text-align:center;
+		color: white; 
+		background: #084A77;
+		border-radius: 45px 45px;
+		font-weight: bold;
+	}
+}
+
+#backButton {
+	width:150px;
+	margin:0;
+	padding:0;
+}
+
+#submitButton {
+	margin-left: 586px;
+	margin-top: -48px;
 }
 
 .team {    
