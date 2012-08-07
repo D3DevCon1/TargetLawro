@@ -1,5 +1,11 @@
+<SCRIPT>
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+	</SCRIPT>
+
 <tr>
-  <td><%= f.datetime_picker 'match_date' %></td>
+  <td class="datepicker"><%= f.datepicker 'match_date' %></td>
   <td></td>
   <td class="team"><%= f.collection_select :home_team, Team.all, :name, :name, :include_blank=>"-Select Home Team-" %></td>
   <td class="team"><%= f.collection_select :away_team, Team.all, :name, :name, :include_blank=>"-Select Away Team-" %></td>
