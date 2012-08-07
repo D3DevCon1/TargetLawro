@@ -5,6 +5,7 @@ gem 'devise', '2.1.0'
 gem 'rails_admin', '0.0.3'
 gem 'cancan'
 gem 'mysql2'
+gem 'jquery_datepicker'
 gem "nifty-generators", :group => :development
 
 
