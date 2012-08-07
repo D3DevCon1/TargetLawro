@@ -8,7 +8,7 @@ class GameweeksController < ApplicationController
   end
 
   def new
-    @gameweek = Gameweek.new
+    @gameweek = Gameweek.create
 	10.times do
 	  @fixture = @gameweek.fixtures.build
 	  @prediction = @fixture.build_prediction
