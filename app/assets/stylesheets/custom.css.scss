@@ -524,3 +524,47 @@ tfoot th em {
 	}
 }
 
+/* gameweeks show /predictions form */
+
+#gameweekDets {	
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: -12px;
+    border: 2px solid $grayLighter;
+    border-radius: 20px 20px 0px 0px; 
+    padding:50px 0px 0px 0px;	
+	background:#084A77;
+	color:white;
+}
+
+#gameweekStart {	
+	width:40%;
+	margin-bottom: -12px;
+    padding:10px 0px 0px 0px;	
+	background:#084A77;
+	color:white;
+	margin-left:26px;
+	margin-top: -40px;
+}
+
+#gameweekFix {	
+	width:40%;
+	margin-bottom: -12px;
+    padding:10px 0px 0px 0px;	
+	background:#084A77;
+	color:white;
+	margin-left:316px;
+	margin-top: -32px;
+}
+
+#showFixtures {
+	margin-top: -15px;	
+}
+
+#showFixtures td.team {
+	padding-left:20px;
+}
+
+
+
