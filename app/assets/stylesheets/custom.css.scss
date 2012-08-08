@@ -430,15 +430,28 @@ tfoot th em {
 	color:white;
 }
  
-#gameweekDate {
+.datepicker {
 	margin-left: 15px;
 	margin-top: -25px;
 	padding: 5px;
+	width: 16%;
+	input, textarea, select, .uneditable-input {
+		width: 100%;
+		height: 22px;
+		margin-left: 0px;
+		padding: none;
+	}
+}
+
+#gameweekDate {
+	margin-top: -25px;
+	margin-left: 15px;
+	padding: 5px;
 	width: 30%;
 	input, textarea, select, .uneditable-input {
-		width: auto;
+		width: 50%;
 		height: 22px;
-		margin-left: -5px;
+		margin-left: 0px;
 	}
 }
 
@@ -448,21 +461,22 @@ tfoot th em {
 	padding: 5px;
 	width: 15%;
 	input, textarea, select, .uneditable-input {
-		width: auto;
+		width: 50%;
 		height: 22px;
-		margin-left: -5px;
+		margin-left: 0px;
 	}
 }
 
 #gameweekFixtures {
 	margin-top: -67px;
-	margin-left: 435px;
+	margin-left: 150px;
 	padding: 5px;
-	width: 15%;
+	width: 21%;
 	input, textarea, select, .uneditable-input {
-		width: auto;
+		width: 50%;
 		height: 22px;
-		margin-left: -5px;
+		margin-left: 0px;
+		text-align: center;
 	}
 }
 

@@ -3,16 +3,10 @@
   <div id="gameweekDetails">
   <div id="gameweekDate">
   <p>
-    <b>Week Commences:</b><br />
-    <%= f.date_select :start_date, :order => [:day, :month, :year] %>
+    <b>Deadline Time:</b><br />
+    <%= f.datetime_picker 'start_date' %>
   </p>
-  </div>
-  <div id="gameweekTime">
-  <p>
-    <b>Deadline:</b><br />
-    <%= f.time_select :start_time %>
-  </p>
-  </div>
+  </div>  
   <div id="gameweekFixtures">
   <p>
     <b>Fixtures:</b><br />
@@ -22,8 +16,7 @@
   </div>
   <table border=1>
   <thead>
-    <th>Date</th>
-	<th>Time</th>
+    <th>Kickoff</th>	
 	<th>Home Team</th>
 	<th>Away Team</th>
 	<th>Home</th>
