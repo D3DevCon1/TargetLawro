@@ -1,16 +1,17 @@
+<%= form_for @gameweek do |f| %>
+  <%= f.error_messages %>
 <% title "Gameweek" %>
 <div id="gameweekDets">  
   <div id="gameweekStart">
-    <b>Deadline Time: 
+    <b>Deadline Time:</b> 
 	&nbsp;<%= @gameweek.start_date.strftime("%d/%m/%Y") %>
   </div>  
   <div id="gameweekFix">
-    <b>Fixtures
+    <b>Fixtures:</b>
 	&nbsp;<%= @gameweek.number_of_fixtures %>
   </div>  
 </div>
 
-<div>
 <table id="showFixtures" border=1>
   <thead>
     <th>Kickoff</th>	
@@ -24,12 +25,13 @@
       <td class="datepicker"><%=h fixture.match_date.strftime("%d/%m/%Y") %></td>  
       <td class="team"><%=h fixture.home_team %></td>
       <td class="team"><%=h fixture.away_team %></td>
-      <td class="goals"><%=h fixture.home_goals %></td>  
-      <td class="goals"><%=h fixture.away_goals %></td>  
+	  <%= f.fields_for :predictions do |builder| %>
+        <%= render "prediction_fields", :f => builder %>
+      <% end %> 
     </tr
   <% end %>
 </table>
-</div>
-<p>
-  <%= link_to "View All", gameweeks_path %>
-</p>
+<div id="gameweekButtons">        
+	<div id="submitButton"><%= f.submit %></div>
+  </div>
+<% end %>

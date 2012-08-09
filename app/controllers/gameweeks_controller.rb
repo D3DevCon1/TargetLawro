@@ -11,7 +11,6 @@ class GameweeksController < ApplicationController
     @gameweek = Gameweek.create
 	10.times do
 	  @fixture = @gameweek.fixtures.build
-	  @prediction = @fixture.build_prediction
 	end
   end
 

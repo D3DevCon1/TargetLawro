@@ -31,7 +31,18 @@ html {
 
 body {
   padding-top: 60px;
-  min-height: 100%;
+  height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em
+}
+
+#footer, .push {
+	height: 4em;
 }
 
 #mainContainer {
@@ -558,8 +569,23 @@ tfoot th em {
 	margin-top: -32px;
 }
 
+#gameweekPredictionButton {
+	margin-left: auto;
+	margin-right: auto;
+	width: 71%;
+	input, textarea, select, .uneditable-input {
+		width: 120px;
+		height: 40px;
+		text-align:center;
+		color: white; 
+		background: #084A77;
+		border-radius: 45px 45px;
+		font-weight: bold;
+	}
+}
+
 #showFixtures {
-	margin-top: -15px;	
+	margin-top: -87px;	
 }
 
 #showFixtures td.team {
