@@ -8,7 +8,7 @@
   <td class="datepicker"><%= f.datetime_picker 'match_date' %></td>  
   <td class="team"><%= f.collection_select :home_team, Team.all, :name, :name, :include_blank=>"-Select Home Team-" %></td>
   <td class="team"><%= f.collection_select :away_team, Team.all, :name, :name, :include_blank=>"-Select Away Team-" %></td>
-  <td class="goals"><%= f.number_field 'home_goals' %></td>  
-  <td class="goals"><%= f.number_field 'away_goals' %></td>  
+  <td class="goals"><%= f.number_field :home_goals %></td>
+  <td class="goals"><%= f.number_field :away_goals %></td>
 </tr>
 

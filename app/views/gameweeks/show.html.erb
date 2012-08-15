@@ -22,7 +22,7 @@
 	<th>Home</th>
 	<th>Away</th>
   <thead>  
-  <%= for fixture in @gameweek.fixtures.each do %>
+  <% for fixture in @gameweek.fixtures.each do %>
     <tr>
 		<td><%=h fixture.match_date %></td>  
 		<td class="team"><%=h fixture.home_team %></td>

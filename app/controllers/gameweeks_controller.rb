@@ -11,6 +11,7 @@ class GameweeksController < ApplicationController
     @gameweek = Gameweek.create
 	10.times do
 	  @fixture = @gameweek.fixtures.build
+	  @prediction = @fixture.build_prediction
 	end
   end
 
@@ -29,7 +30,7 @@ class GameweeksController < ApplicationController
 
   def update
     @gameweek = Gameweek.find(params[:id])
-    if @gameweek.update_attributes(params[:gameweek])
+	if @gameweek.update_attributes(params[:gameweek])
       redirect_to @gameweek, :notice  => "Successfully updated gameweek."
     else
       render :action => 'edit'
