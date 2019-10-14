@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.5'
+gem 'rails', '3.2.17'
 gem 'devise', '2.1.0'
 gem 'rails_admin', '0.0.3'
 gem 'cancan'
